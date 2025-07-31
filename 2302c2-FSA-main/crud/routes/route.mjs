@@ -1,6 +1,7 @@
 import express from "express"
 import controller from "../controllers/productController.mjs"
 import userController from "../controllers/userController.mjs"
+import categoryController from "../controllers/categorycontroller.mjs"
 import { upload } from "../cloudinaryConfig.mjs"
 
 const router = express.Router()
@@ -9,10 +10,12 @@ router
 //GET REQUESTs
 
 .get("/",controller.getAllProducts)
+.get("/categories",categoryController.getAllCategories)
 .get("/product/:id",controller.getProduct)
 
 //POST REQUESTs
 .post("/addproduct",controller.addProduct)
+.post("/addcategory",categoryController.addCategory)
 //file upload middleware
 .post("/addproductwithimage", upload.single("image")  ,controller.addProductWithImage
 

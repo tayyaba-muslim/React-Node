@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Footer from './components/Footer';
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
+import AddProduct from "./pages/AddProduct";
 import Wishlist from "./components/Wishlist";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/admin/addproduct" element={<AddProduct />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />    
         <Route path="/login" element={<Login />} />
